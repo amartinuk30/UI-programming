@@ -6,13 +6,13 @@
           <v-card-title class="headline">Register</v-card-title>
           <v-card-text>
             <v-form @submit.prevent="register">
-              <v-text-field v-model="username" label="Username" required></v-text-field>
-              <v-text-field v-model="email" label="Email" required></v-text-field>
-              <v-select v-model="gender" :items="['Male', 'Female']" label="Gender" required></v-select>
-              <v-text-field v-model="birthdate" label="Birthdate" type="date" required></v-text-field>
-              <v-textarea v-model="about" label="About Me"></v-textarea>
-              <v-text-field v-model="password" label="Password" type="password" required></v-text-field>
-              <v-btn type="submit" color="primary" block>Register</v-btn>
+              <v-text-field v-model="username" label="Username" required data-test="username"></v-text-field>
+              <v-text-field v-model="email" label="Email" required data-test="email"></v-text-field>
+              <v-select v-model="gender" :items="['Male', 'Female']" label="Gender" required data-test="gender"></v-select>
+              <v-text-field v-model="birthdate" label="Birthdate" type="date" required data-test="birthdate"></v-text-field>
+              <v-textarea v-model="about" label="About Me" data-test="about"></v-textarea>
+              <v-text-field v-model="password" label="Password" type="password" required data-test="password"></v-text-field>
+              <v-btn type="submit" color="primary" block data-test="registerButton">Register</v-btn>
             </v-form>
           </v-card-text>
         </v-card>

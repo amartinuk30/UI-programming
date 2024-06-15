@@ -9,7 +9,7 @@
                 <v-avatar size="120">
                   <img :src="user.photo || 'https://via.placeholder.com/120'" alt="User Photo">
                 </v-avatar>
-                <v-btn @click="$refs.fileInput.click()">Upload Photo</v-btn>
+                <v-btn data-testid="upload-btn" @click="$refs.fileInput.click()">Upload Photo</v-btn>
                 <input ref="fileInput" type="file" @change="onFileChange" style="display: none;">
               </v-col>
               <v-col cols="12" sm="8">
@@ -32,7 +32,7 @@
             </v-row>
           </v-card-text>
           <v-card-actions>
-            <v-btn color="primary" @click="logout" block>Logout</v-btn>
+            <v-btn data-testid="logout-btn" color="primary" @click="logout" block>Logout</v-btn>
           </v-card-actions>
         </v-card>
         <v-card v-else>
